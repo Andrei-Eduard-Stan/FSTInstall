@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vXLlerNBurY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\andre\\RiderProjects\\FSTInstall\\FSTSilentInstaller\\FSTSilentInstaller.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.200\\microsoft.net.sdk.compilers.toolset.9.0.200.nupkg.sha512"
+  ],
+  "logs": []
+}

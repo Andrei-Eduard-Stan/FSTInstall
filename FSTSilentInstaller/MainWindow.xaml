@@ -1,0 +1,73 @@
+﻿<Window x:Class="SilentInstaller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Silent Installer" Height="500" Width="800" Background="White">
+
+    <Grid>
+        <!-- Page 1: Selection Screen -->
+        <Grid Name="SelectionPage">
+            <Image Source="/data/fullers-logo.png" Height="80" VerticalAlignment="Top" Margin="0,20,0,0"/>
+            <TextBlock Text="Silent Installer" FontSize="24" FontWeight="Regular" Height="400"
+                       HorizontalAlignment="Center" Margin="0,100,0,0"/>
+            
+            <!-- Installer Selection -->
+            <Border BorderBrush="DarkRed" BorderThickness="2" Width="250" Height="150"
+                    HorizontalAlignment="Left" Margin="80,170,0,0">
+                <StackPanel>
+                    <TextBlock Text="Choose Installer Type" FontSize="16" FontWeight="Bold" 
+                               TextAlignment="Center" Margin="5"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="◀" Width="30" />
+                        <TextBlock Name="InstallerType" Text="Managed House" FontSize="18" 
+                                   FontWeight="Bold" Margin="10"/>
+                        <Button Content="▶" Width="30"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Included Apps -->
+            <Border BorderBrush="DarkRed" BorderThickness="2" Width="250" Height="150"
+                    HorizontalAlignment="Right" Margin="0,170,80,0">
+                <StackPanel>
+                    <TextBlock Text="What's Included" FontSize="16" FontWeight="Bold" 
+                               TextAlignment="Center" Margin="5"/>
+                    <ListBox Name="AppList">
+                        <ListBoxItem Content="✔ App 1"/>
+                        <ListBoxItem Content="✔ App 2"/>
+                        <ListBoxItem Content="✔ App 3"/>
+                        <ListBoxItem Content="✔ App 4"/>
+                    </ListBox>
+                </StackPanel>
+            </Border>
+
+            <!-- Start Button -->
+            <Button Content="Start" Width="100" Height="40" Background="Gold" 
+                    FontSize="16" FontWeight="Bold"
+                    HorizontalAlignment="Center" Margin="0,350,0,0"/>
+        </Grid>
+
+        <!-- Page 2: Installation Progress -->
+        <Grid Name="InstallationPage" Visibility="Hidden">
+            <Image Source="logo.png" Height="80" VerticalAlignment="Top" Margin="0,20,0,0"/>
+            <TextBlock Text="Silent Installer" FontSize="24" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Margin="0,100,0,0"/>
+            
+            <!-- Progress Bar -->
+            <ProgressBar Name="InstallProgress" Width="500" Height="20" 
+                         HorizontalAlignment="Center" Margin="0,150,0,0"/>
+
+            <!-- Status Message -->
+            <TextBlock Text="Custom Message saying state of installation..." 
+                       FontSize="14" HorizontalAlignment="Center" Margin="0,180,0,0"/>
+
+            <!-- Log Output -->
+            <TextBox Name="OutputLog" Width="500" Height="150" 
+                     HorizontalAlignment="Center" Margin="0,220,0,0"/>
+
+            <!-- Abort Button -->
+            <Button Content="Abort" Width="100" Height="40" Background="Gold" 
+                    FontSize="16" FontWeight="Bold"
+                    HorizontalAlignment="Center" Margin="0,400,0,0"/>
+        </Grid>
+    </Grid>
+</Window>
